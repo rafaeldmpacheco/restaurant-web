@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiPower } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo.png";
 import { Container, Header, List, ListItem, Title } from "./styles";
 
 const response = {
@@ -57,7 +57,7 @@ export default function Dishes() {
         <span>Bem-vindo(a)!</span>
 
         <button onClick={handleLogout} type="button">
-          <FiPower size={18} color="#e02041" />
+          <FiPower size={18} color="#a0131b" />
         </button>
       </Header>
 

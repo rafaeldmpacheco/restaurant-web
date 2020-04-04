@@ -8,9 +8,19 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  margin-top: 50px;
+  margin-top: 10px;
 `;
 
 export const Input = styled.input`
-margin-top: 8px;
+  margin-top: 8px;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 350px
+  }
 `;

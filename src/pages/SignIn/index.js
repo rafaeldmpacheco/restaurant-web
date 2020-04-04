@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link, useHistory } from "react-router-dom";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logoComplete.png";
 import api from "../../services/api";
-import { Container, Form, Input } from "./styles";
+import { Container, LogoContainer, Form, Input, Logo } from "./styles";
 
 export default function SignIn() {
   const [username, setUsername] = useState("");
@@ -26,7 +26,9 @@ export default function SignIn() {
   return (
     <Container>
       <section>
-        <img src={logoImg} alt="Be The Hero" />
+        <LogoContainer>
+          <img src={logoImg} alt="Restaurant Logo" />
+        </LogoContainer>
 
         <Form onSubmit={handleLogin}>
           <Input
@@ -46,7 +48,7 @@ export default function SignIn() {
           </button>
 
           <Link className="back-link" to="/sign-up">
-            <FiLogIn size={16} color="#E02041" />
+            <FiLogIn size={16} color="#a0131b" />
             Criar conta
           </Link>
         </Form>

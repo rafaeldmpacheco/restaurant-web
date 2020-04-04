@@ -14,7 +14,7 @@ export const Content = styled.div`
   width: 100%;
   padding: 96px;
   background: #f0f0f5;
-  box-shadow: 0 0 100px rgba(0, 0, 0.1);
+  box-shadow: 0 0 100px #a0131b;
   border-radius: 8px;
 
   display: flex;
@@ -23,8 +23,9 @@ export const Content = styled.div`
 `;
 
 export const SectionTitle = styled.h1`
-  margin: 64px 0 32px;
+  margin: 32px 0 32px;
   font-size: 32px;
+  text-align: center
 `;
 
 export const Form = styled.form`
@@ -34,4 +35,8 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   margin-top: 8px;
+`;
+
+export const Logo = styled.img`
+  height: 200px
 `;

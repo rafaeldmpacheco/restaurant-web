@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { Link, useHistory } from "react-router-dom";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logoComplete.png";
 import api from "../../services/api";
-import { Container, Content, Form, Input, SectionTitle } from "./styles";
+import { Container, Content, Form, Input, SectionTitle, Logo } from "./styles";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -32,12 +32,12 @@ export default function SignUp() {
     <Container>
       <Content>
         <section>
-          <img src={logoImg} alt="Be The Hero" />
+          <Logo src={logoImg} alt="Rastaurant logo" />
 
           <SectionTitle>Cadastro</SectionTitle>
 
           <Link className="back-link" to="/">
-            <FiArrowLeft size={16} color="#E02041" />
+            <FiArrowLeft size={16} color="#a0131b" />
             Voltar ao login
           </Link>
         </section>
