@@ -1,27 +1,19 @@
 import React, { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
-import { Link, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import logoImg from "../../assets/logoComplete.png";
-import api from "../../services/api";
+import { loginRequest } from "../../store/modules/auth/actions";
 import { Container, Form, Input, LogoContainer } from "./styles";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const history = useHistory();
+  const dispatch = useDispatch();
 
   async function handleLogin(e) {
     e.preventDefault();
-    try {
-      const body = { username, password };
-
-      api.post("/5defab092f0000e7848e0c9e", body).then(() => {
-        history.push("/dishes");
-      });
-    } catch (err) {
-      alert("Houve um problema com o login, verifique suas credenciais!");
-    }
+    dispatch(loginRequest(username, password));
   }
 
   return (

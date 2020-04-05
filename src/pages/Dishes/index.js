@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FiPower } from "react-icons/fi";
-import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import logoImg from "../../assets/logo.png";
+import { signOut } from "../../store/modules/auth/actions";
 import { Container, Header, List, ListItem, Title } from "./styles";
 
 const response = {
@@ -39,14 +40,14 @@ const response = {
 
 export default function Dishes() {
   const [dishes, setDishes] = useState([]);
-  const history = useHistory();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setDishes(response.dishes);
   }, []);
 
   function handleLogout() {
-    history.push("/");
+    dispatch(signOut());
   }
 
   return (
