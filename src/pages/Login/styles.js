@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  margin-top: 10px;
+  margin-top: 50px;
 `;
 
 export const Input = styled.input`
@@ -21,6 +21,6 @@ export const LogoContainer = styled.div`
   justify-content: center;
 
   img {
-    height: 200px
+    height: 200px;
   }
 `;

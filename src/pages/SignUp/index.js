@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import logoImg from "../../assets/logoComplete.png";
+import logoImg from "../../assets/logo.svg";
 import { signUpRequest } from "../../store/modules/auth/actions";
 import { Container, Content, Form, Input, Logo, SectionTitle } from "./styles";
 

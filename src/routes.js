@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { FiLogIn } from "react-icons/fi";
+import { Link, Route, Switch } from "react-router-dom";
 import Dishes from "./pages/Dishes";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -9,6 +10,11 @@ const NotFound = () => {
   return (
     <PageNotFound>
       <h1>Página não encontrada</h1>
+
+      <Link className="back-link" to="/">
+        <FiLogIn size={26} color="#a0131b" />
+        Go to Login
+      </Link>
     </PageNotFound>
   );
 };

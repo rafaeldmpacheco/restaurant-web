@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiPower } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/logo.svg";
 import { signOut } from "../../store/modules/auth/actions";
 import { Container, Header, List, ListItem, Title } from "./styles";
 

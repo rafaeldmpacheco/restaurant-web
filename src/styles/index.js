@@ -5,6 +5,7 @@ export const PageNotFound = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
 `;
 
 export const Button = styled.button`

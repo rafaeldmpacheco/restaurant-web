@@ -5,17 +5,11 @@ import { loginSuccess, signFailure } from "./actions";
 
 export function* login({ payload }) {
   try {
-    const { username, password } = payload;
+    yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
 
-    const response = yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
+    yield put(loginSuccess());
 
-    if (response.data.username === username && response.data.password === password) {
-      yield put(loginSuccess());
-
-      history.push("/dishes");
-    } else {
-      alert("Houve um problema com o cadastro, verifique suas credenciais!");
-    }
+    history.push("/dishes");
   } catch (err) {
     yield put(signFailure());
     alert("Houve um problema com o login, verifique suas credenciais!");

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import logoImg from "../../assets/logoComplete.png";
+import logoImg from "../../assets/logo.svg";
 import { loginRequest } from "../../store/modules/auth/actions";
 import { Container, Form, Input, LogoContainer } from "./styles";
 import { Button } from "../../styles";
