@@ -21,6 +21,6 @@ export const LogoContainer = styled.div`
   justify-content: center;
 
   img {
-    height: 350px
+    height: 200px
   }
 `;

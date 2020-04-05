@@ -52,7 +52,7 @@ export default function Dishes() {
   return (
     <Container>
       <Header>
-        <img src={logoImg} alt="Be The Hero" />
+        <img src={logoImg} alt="Restaurant logo" />
 
         <span>Bem-vindo(a)!</span>
 

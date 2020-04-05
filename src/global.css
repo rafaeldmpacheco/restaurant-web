@@ -83,3 +83,9 @@ form textarea {
 .back-link:hover {
   opacity: 0.8;
 }
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

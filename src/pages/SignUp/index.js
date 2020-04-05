@@ -8,6 +8,7 @@ import { Container, Content, Form, Input, SectionTitle, Logo } from "./styles";
 export default function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const history = useHistory();
 
@@ -17,10 +18,14 @@ export default function SignUp() {
     try {
       const body = { username, password };
 
-      api.post("/5defab092f0000e7848e0c9e", body).then(() => {
-        alert("Conta criada com sucesso! Redirecionando para o login");
-        history.push("/");
-      });
+      if (password === confirmPassword) {
+        api.post("/5defab092f0000e7848e0c9e", body).then(() => {
+          alert("Conta criada com sucesso! Redirecionando para o login");
+          history.push("/");
+        });
+      } else {
+        alert("As senhas informadas precisam ser iguais!");
+      }
     } catch (err) {
       alert(
         "Houve um problema com o cadastro, verifique os dados preenchidos!"
@@ -54,6 +59,13 @@ export default function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <Input
+            type="password"
+            placeholder="Confirme sua senha"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+
           <button className="button" type="submit">
             Cadastrar
           </button>

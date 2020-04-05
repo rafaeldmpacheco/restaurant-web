@@ -3,11 +3,12 @@ import { FiLogIn } from "react-icons/fi";
 import { Link, useHistory } from "react-router-dom";
 import logoImg from "../../assets/logoComplete.png";
 import api from "../../services/api";
-import { Container, LogoContainer, Form, Input, Logo } from "./styles";
+import { Container, Form, Input, LogoContainer } from "./styles";
 
-export default function SignIn() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const history = useHistory();
 
   async function handleLogin(e) {
@@ -39,6 +40,7 @@ export default function SignIn() {
 
           <Input
             placeholder="Senha"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
