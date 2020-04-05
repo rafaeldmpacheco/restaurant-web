@@ -55,14 +55,14 @@ export default function Dishes() {
       <Header>
         <img src={logoImg} alt="Restaurant logo" />
 
-        <span>Bem-vindo(a)!</span>
+        <span>Welcome!</span>
 
         <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#a0131b" />
         </button>
       </Header>
 
-      <Title>Pratos</Title>
+      <Title>Dishes</Title>
 
       <List>
         {dishes.map((dish) => (

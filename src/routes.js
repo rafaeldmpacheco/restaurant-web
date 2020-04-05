@@ -1,26 +1,25 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Dishes from "./pages/Dishes";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import { PageNotFound } from "./styles";
 
-const PageNotFound = () => {
+const NotFound = () => {
   return (
-    <div>
+    <PageNotFound>
       <h1>Página não encontrada</h1>
-    </div>
+    </PageNotFound>
   );
 };
 
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/sign-up" component={SignUp} />
-        <Route path="/dishes" component={Dishes} isPrivate />
-        <Route component={PageNotFound} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Login} />
+      <Route path="/sign-up" component={SignUp} />
+      <Route path="/dishes" component={Dishes} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }

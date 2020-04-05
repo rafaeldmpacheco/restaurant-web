@@ -23,35 +23,35 @@ export default function SignUp() {
         <section>
           <Logo src={logoImg} alt="Rastaurant logo" />
 
-          <SectionTitle>Cadastro</SectionTitle>
+          <SectionTitle>Sign Up</SectionTitle>
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#a0131b" />
-            Voltar ao login
+            Back to login
           </Link>
         </section>
 
         <Form onSubmit={handleRegister}>
           <Input
-            placeholder="Usuário"
+            placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <Input
             type="password"
-            placeholder="Senha"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <Input
             type="password"
-            placeholder="Confirme sua senha"
+            placeholder="Confirm password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
           <button className="button" type="submit">
-            Cadastrar
+            Register
           </button>
         </Form>
       </Content>

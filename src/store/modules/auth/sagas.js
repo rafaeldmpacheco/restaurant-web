@@ -9,7 +9,7 @@ export function* login({ payload }) {
 
     const response = yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
 
-    if (response.username === username && response.password === password) {
+    if (response.data.username === username && response.data.password === password) {
       yield put(loginSuccess());
 
       history.push("/dishes");

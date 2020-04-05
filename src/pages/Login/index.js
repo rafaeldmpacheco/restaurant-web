@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logoComplete.png";
 import { loginRequest } from "../../store/modules/auth/actions";
 import { Container, Form, Input, LogoContainer } from "./styles";
+import { Button } from "../../styles";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const loading = useSelector((state) => state.auth.loading);
   const dispatch = useDispatch();
 
   async function handleLogin(e) {
@@ -25,25 +27,23 @@ export default function Login() {
 
         <Form onSubmit={handleLogin}>
           <Input
-            placeholder="Usuário"
+            placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
 
           <Input
-            placeholder="Senha"
+            placeholder="Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button className="button" type="submit">
-            Entrar
-          </button>
+          <Button type="submit">{loading ? "Loading..." : "Login"}</Button>
 
           <Link className="back-link" to="/sign-up">
             <FiLogIn size={16} color="#a0131b" />
-            Criar conta
+            Sign Up
           </Link>
         </Form>
       </section>

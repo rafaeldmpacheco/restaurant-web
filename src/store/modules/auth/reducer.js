@@ -13,7 +13,7 @@ export default function auth(state = INITIAL_STATE, action) {
         break;
       }
       case "@auth/LOGIN_SUCCESS": {
-        draft.signed = true;
+        draft.authenticated = true;
         draft.loading = false;
         break;
       }
@@ -22,7 +22,7 @@ export default function auth(state = INITIAL_STATE, action) {
         break;
       }
       case "@auth/SIGN_OUT": {
-        draft.signed = false;
+        draft.authenticated = false;
         break;
       }
       default:

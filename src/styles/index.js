@@ -1,3 +1,34 @@
+import styled, { createGlobalStyle } from "styled-components";
+
+export const PageNotFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  height: 60px;
+  background: #a0131b;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  transition: filter 0.2s;
+
+  hover {
+    filter: brightness(90%);
+  }
+`;
+
+export default createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 * {
@@ -43,27 +74,6 @@ form textarea {
   line-height: 24px;
 }
 
-.button {
-  width: 100%;
-  height: 60px;
-  background: #a0131b;
-  border: 0;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 700;
-  margin-top: 16px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  transition: filter 0.2s;
-}
-
-.button:hover {
-  filter: brightness(90%);
-}
-
 .back-link {
   display: flex;
   align-items: center;
@@ -84,8 +94,4 @@ form textarea {
   opacity: 0.8;
 }
 
-.align-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+`;
