@@ -10,7 +10,7 @@ import { store } from "./store";
 const NotFound = () => {
   return (
     <PageNotFound>
-      <h1>Página não encontrada</h1>
+      <h1>Page not found!</h1>
       <Link className="back-link" to="/">
         <FiLogIn size={26} color="#a0131b" />
         Go to Login

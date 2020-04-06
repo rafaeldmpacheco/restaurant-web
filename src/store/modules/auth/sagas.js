@@ -5,7 +5,7 @@ import { loginSuccess, signFailure } from "./actions";
 
 export function* login({ payload }) {
   try {
-    if (payload.username.length === 0 || payload.password.length === 0) {
+    if (payload.username.length > 0 && payload.password.length > 0) {
       yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
 
       yield put(loginSuccess());

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.svg";
 import { signUpRequest } from "../../store/modules/auth/actions";
 import { Container, Content, Form, Input, Logo, SectionTitle } from "./styles";
+import { Button } from "../../styles";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -50,9 +51,7 @@ export default function SignUp() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
-          <button className="button" type="submit">
-            Register
-          </button>
+          <Button type="submit">Register</Button>
         </Form>
       </Content>
     </Container>
