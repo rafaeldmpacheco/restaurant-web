@@ -7,7 +7,6 @@ import Styles from "./styles";
 import Routes from "./routes";
 import history from "./services/history";
 import { persistor, store } from "./store";
-import "./config/ReactotronConfig";
 
 function App() {
   return (

@@ -5,14 +5,19 @@ import { loginSuccess, signFailure } from "./actions";
 
 export function* login({ payload }) {
   try {
-    yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
+    if (payload.username.length === 0 || payload.password.length === 0) {
+      yield call(api.post, "/5defab092f0000e7848e0c9e", payload);
 
-    yield put(loginSuccess());
+      yield put(loginSuccess());
 
-    history.push("/dishes");
+      history.push("/dishes");
+    } else {
+      yield put(signFailure());
+      alert("Preencha usuário e senha para continuar!");
+    }
   } catch (err) {
     yield put(signFailure());
-    alert("Houve um problema com o login, verifique suas credenciais!");
+    alert("Erro ao realizar o login, verifique suas credenciais!");
   }
 }
 
@@ -23,11 +28,12 @@ export function* signUp({ payload }) {
 
       history.push("/");
     } else {
+      yield put(signFailure());
       alert("As senhas informadas precisam ser iguais!");
     }
   } catch (err) {
-    alert("Houve um problema com o cadastro, verifique suas credenciais!");
     yield put(signFailure());
+    alert("Houve um problema com o cadastro, verifique suas credenciais!");
   }
 }
 
